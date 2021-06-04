@@ -23,12 +23,12 @@ settings:
     - type: list
       caption: Code Server Version
       name: version
-      default: "3.10.2"
+      default: "version-v3.10.2"
       required: true
       values:
-        "3.10.0": version-v3.10.0
-        "3.10.1": version-v3.10.1
-        "3.10.2": version-v3.10.2
+        version-v3.10.0: "3.10.0"
+        version-v3.10.1: "3.10.1"
+        version-v3.10.2: "3.10.2"
 
 nodes:
 - nodeType: nginx-dockerized
@@ -40,7 +40,7 @@ nodes:
     - cp:APP
 - nodeGroup: cp
   cloudlets: 16
-  image: linuxserver/code-server:${settings.version}
+  image: linuxserver/code-server:${settings.version.}
   env:
     PASSWORD: ${globals.PASSWORD}
     SUDO_PASSWORD: ${globals.SUDO_PASSWORD}
