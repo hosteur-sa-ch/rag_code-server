@@ -1,0 +1,59 @@
+version: 0.1
+type: install
+id: code-server
+name: Code-server
+logo: images/joomla.png
+
+baseUrl: https://raw.githubusercontent.com/hosteur-sa-ch/rag_code-server/main/
+
+categories:
+  - apps/dev-and-admin-tools
+homepage: https://github.com/cdr/code-server
+description: Run VS Code on any machine anywhere and access it in the browser.
+
+ssl: true
+
+globals:
+  PASSWORD: ${fn.password(12)}
+  SUDO_PASSWORD: ${fn.password(12)}
+  EXPOSE_PORT: 8443
+
+settings:
+  fields:
+    - type: list
+      caption: Code Server Version
+      name: version
+      default: "3.10.2"
+      required: true
+      values:
+        "3.10.0": version-v3.10.0
+        "3.10.1": version-v3.10.1
+        "3.10.2": version-v3.10.2
+
+nodes:
+- nodeType: nginx-dockerized
+  tag: 1.18.0
+  cloudlets: 4
+  nodeGroup: bl
+  displayName: Proxy SSL
+  links:
+    - cp:APP
+- nodeGroup: cp
+  cloudlets: 16
+  image: linuxserver/code-server:${settings.version}
+  env:
+    PASSWORD: ${globals.PASSWORD}
+    SUDO_PASSWORD: ${globals.SUDO_PASSWORD}
+    DOCKER_EXPOSED_PORT: ${globals.EXPOSE_PORT}
+  
+onInstall:
+- cmd [lb]: |-
+    curl -fsSL "https://raw.githubusercontent.com/hosteur-sa-ch/rag_code-server/main/nginx/nginx-jelastic.conf" -o /etc/nginx/nginx-jelastic.conf 2>&1 && curl -fsSL "https://raw.githubusercontent.com/hosteur-sa-ch/rag_code-server/main/nginx/upstream.sh" | sh
+- restartNodes [nginx-dockerized]
+
+success: |
+  Below you will find your passwords for you code server.  
+  Admin URL: [${env.protocol}://${env.domain})  
+  Password: ${globals.PASSWORD}
+  SUDO Password: ${globals.SUDO_PASSWORD}
+  More documentations Here (https://github.com/cdr/code-server)
