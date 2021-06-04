@@ -19,6 +19,8 @@ Find here how to deploy on 2 clicks a code Server on your Ragnarokkr Account
 5. Take a cup of coffe, we do the rest.
 6. Once the package is deployed, you should find on screen and on your mailbox account all details to connect to Code Server.
 
+---
+
 ![marketplace01](/images/doc1.png)
 ![marketplace02](/images/doc2.png)
 ![marketplace03](/images/doc3.png)
