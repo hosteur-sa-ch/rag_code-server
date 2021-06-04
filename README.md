@@ -21,9 +21,9 @@ Find here how to deploy on 2 clicks a code Server on your Ragnarokkr Account
 
 ---
 
-![marketplace01](/images/doc1.png)
-![marketplace02](/images/doc2.png)
-![marketplace03](/images/doc3.png)
+![Hosteur Logo](/images/doc1.png)
+![Hosteur Logo](/images/doc2.png)
+![Hosteur Logo](/images/doc3.png)
 
 [Open Ragnarokkr account](https://ragnarok.hosteur.com/com)
 
