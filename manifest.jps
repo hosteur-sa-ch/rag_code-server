@@ -2,7 +2,7 @@ version: 0.1
 type: install
 id: code-server
 name: Code-server
-logo: images/joomla.png
+logo: images/vscode.png
 
 baseUrl: https://raw.githubusercontent.com/hosteur-sa-ch/rag_code-server/main/
 
