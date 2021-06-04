@@ -1,9 +1,12 @@
-# rag_code-server
-Ragnarokkr Package for Code Server
+# Ragnarokkr Package for Code Server
+
+Deploy Code Server on Hosteur Ragnarokkr (Jelastic Powered)
+
 
 ### Setup 
 
-![VS Code Logo](../images/vscode.png)
+![Hosteur Logo](../images/logo-hosteur_2021.png)
+https://ragnarok.hosteur.com/
 
 ### Deploy 
 

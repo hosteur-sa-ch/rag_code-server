@@ -1,15 +1,15 @@
-version: 0.1
+version: 1.0
 type: install
 id: code-server
 name: Code-server
-logo: images/vscode.png
+logo: images/logo-hosteur_ico_2021.png
 
 baseUrl: https://raw.githubusercontent.com/hosteur-sa-ch/rag_code-server/main/
 
 categories:
   - apps/dev-and-admin-tools
 homepage: https://github.com/cdr/code-server
-description: Run VS Code on any machine anywhere and access it in the browser.
+description: Run Code server on any machine anywhere and access it in the browser.
 
 ssl: true
 
@@ -54,7 +54,7 @@ onInstall:
 
 success: |
   Below you will find your passwords for you code server.  
-  * [Code URL]${env.protocol}://${env.domain})
+  * [Code URL](${env.protocol}://${env.domain})
   * Password: ${globals.PASSWORD}
   * SUDO Password: ${globals.SUDO_PASSWORD}
   *More documentations Here (https://github.com/cdr/code-server)*
