@@ -40,7 +40,8 @@ nodes:
     - cp:APP
 - nodeGroup: cp
   cloudlets: 16
-  image: linuxserver/code-server:${settings.version.}
+  displayName: Code Server
+  image: linuxserver/code-server:${settings.version}
   env:
     PASSWORD: ${globals.PASSWORD}
     SUDO_PASSWORD: ${globals.SUDO_PASSWORD}
@@ -53,7 +54,7 @@ onInstall:
 
 success: |
   Below you will find your passwords for you code server.  
-  Admin URL: [${env.protocol}://${env.domain})  
-  Password: ${globals.PASSWORD}
-  SUDO Password: ${globals.SUDO_PASSWORD}
-  More documentations Here (https://github.com/cdr/code-server)
+  * [Code URL]${env.protocol}://${env.domain})
+  * Password: ${globals.PASSWORD}
+  * SUDO Password: ${globals.SUDO_PASSWORD}
+  *More documentations Here (https://github.com/cdr/code-server)*
