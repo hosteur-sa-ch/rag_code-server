@@ -57,4 +57,5 @@ success: |
   * [Code URL](${env.protocol}://${env.domain})
   * Password: ${globals.PASSWORD}
   * SUDO Password: ${globals.SUDO_PASSWORD}
+  
   *More documentations Here (https://github.com/cdr/code-server)*
