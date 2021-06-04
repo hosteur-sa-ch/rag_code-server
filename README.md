@@ -6,6 +6,7 @@ Deploy Code Server on Hosteur Ragnarokkr (Jelastic Powered)
 ### Setup 
 
 ![Hosteur Logo](/images/logo-hosteur_2021.png)
+
 [Open Ragnarokkr account](https://ragnarok.hosteur.com/com)
 
 ### Deploy 
