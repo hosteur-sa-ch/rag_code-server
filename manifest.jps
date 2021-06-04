@@ -1,5 +1,5 @@
-version: 1.0
 type: install
+version: 1.0
 id: code-server
 name: Code-server
 logo: images/logo-hosteur_ico_2021.png
@@ -9,7 +9,7 @@ baseUrl: https://raw.githubusercontent.com/hosteur-sa-ch/rag_code-server/main/
 categories:
   - apps/dev-and-admin-tools
 homepage: https://github.com/cdr/code-server
-description: Run Code server on any machine anywhere and access it in the browser.
+description: Run Code server Ragnarokkr anywhere and access it in the browser.
 
 ssl: true
 
