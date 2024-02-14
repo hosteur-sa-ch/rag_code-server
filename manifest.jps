@@ -23,12 +23,12 @@ settings:
     - type: list
       caption: Code Server Version
       name: version
-      default: "version-v3.10.2"
+      default: "version-v4.21.0"
       required: true
       values:
-        version-v3.10.0: "3.10.0"
-        version-v3.10.1: "3.10.1"
-        version-v3.10.2: "3.10.2"
+        version-v4.21.1: "v4.21.1"
+        version-v4.21.0: "v4.21.0"
+        version-v4.20.1: "v4.20.1"
 
 nodes:
 - nodeType: nginx-dockerized
